@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Base : MonoBehaviour {
+
+    public GameObject torre;
+
+    void OnMouseDown()
+    {
+        GameObject temporal;
+        Vector3 pos = this.transform.position;
+        pos.y = pos.y + .4f;
+        temporal = Instantiate(torre);
+        temporal.transform.position = pos;
+        temporal.layer = 5;
+        Destroy(this.gameObject);
+    }
+
+}
+Top
+User avatar
